@@ -1,0 +1,44 @@
+<html> 
+<head><title>imposto</title></head>
+<body>
+<span id="imposto"> </span>
+
+
+    <script>
+let aliquota = 0;
+let a = Number(prompt("deseja calcular o imposto? [1]-sim [0]-Nao"))
+while( a == 1){
+let nome = prompt("insira o nome do contribuente");
+let cpf = prompt("insira o cpf do contribuente");
+let renda = Number (prompt("insira a renda anual do contribuente"));
+let dep = Number (prompt("insira o numero de dependentes"));
+a = Number(prompt("deseja calcular o imposto? [1]-sim [0]-Nao"));
+
+let desconto = dep * 110;
+let rendliq = renda - desconto;
+
+if (rendliq<= 900)
+{
+    aliquota = 0;
+}
+ if( rendliq>900 && rendliq<= 5000){
+    aliquota = 5;}
+   
+if( rendliq>5000 && rendliq<= 10000){
+    aliquota = 10;}
+    
+
+if( rendliq>10001) {
+    aliquota = 15;}
+
+
+let impo = (aliquota/100) * rendliq;
+
+document.getElementById("imposto").innerHTML += "<hr></br> Nome: "+nome+"</br>CPF: "+cpf+"</br>Renda Anual: "+renda+"</br>Dependentes: "+dep+"</br>IMPOSTO: "+impo;
+
+}
+
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,21 @@
+<html>
+    <head>
+        <title>escola</title>
+    </head>
+    <body>
+        <div id="descricao"></div>
+        <script>
+            let escola = prompt("Ola! insira o nome da escola");
+            let pergunta = Number(prompt("Deseja cadastrar disciplinas?- sim(1) Não(0)"));
+            
+            while(pergunta == 1){
+                let disciplina = prompt("Insira o nome da discplina");
+                let descri = prompt("Insira a descrição da disciplina");
+                let freq = prompt("Insira a frequência mínima");
+                let nota = prompt("Insira a nota mínima para aprovação");
+                document.getElementById("descricao").innerHTML += escola+"<hr></br>Disciplina: "+disciplina+"<br>Descrição: "+descri+"<br>Frequência Mínina: "+freq+"<br>Nota Mínima: "+nota;
+                pergunta = Number(prompt("Deseja cadastrar disciplinas?- sim(1) Não(0)"));           
+            }
+        </script>
+    </body>
+</html>

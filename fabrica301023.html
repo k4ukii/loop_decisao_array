@@ -1,0 +1,34 @@
+<html>
+<head>
+    <title>peças</title>
+</head>
+<body>
+    <span id="relatorio"></span>
+    <script>
+     
+       
+        let a = 0;
+        let b = 0;
+        let c = 0;
+        let reprovada = [];
+        let inicio = prompt("Deseja iniciar a contagem? S(1) N(0)");
+        while(inicio==1){
+        let idpeca = Number(prompt("Qual o code da peça?"));
+        a++;
+       
+        let estado = Number(prompt("aprovado [1]- reprovado[0]"));
+        inicio = prompt("Nova Peça? S(1) N(0)");
+        if (estado==1){
+           
+            b++;
+        }
+        else {
+            c++;
+            reprovada.push(idpeca);
+        }}
+        document.getElementById("relatorio").innerHTML= "Peças aprovadas: "+b+"</br>Peças Reprovadas: "+c+"</br>"+reprovada+"</br>Peças Totais: "+a;
+    </script>
+       
+ 
+</body>
+</html>

@@ -1,0 +1,40 @@
+<html>
+    <head>
+        <title>avaliacao</title>
+    </head>
+    <body>
+        <div id="descricao"></div>
+        <div id="final"></div>
+        <script>
+
+            let contagem = 0;
+            let ap = 0;
+            let re = 0;
+            let resultado = "";
+            while(contagem < 3){
+                let matricula = prompt("Insira a matríula do aluno");
+                let n1 = Number(prompt("Insira a primeira nota"));
+                let n2 = Number(prompt("Insira a segunda nota"));
+                let n3 = Number(prompt("Insira a terceira nota"));
+                let freq = Number(prompt("Insira o numero de aulas frequentadas"));
+                let media= (n1+n2+n3)/3;
+                let fre = 3.125*freq;
+             
+                if(fre>=80 && media>=7){
+                    resultado = "APROVADO";
+                    ap++;
+
+                }
+                else {
+                    resultado = "REPROVADO";
+                    re++;
+                }
+            
+                document.getElementById("descricao").innerHTML += "<hr>"+matricula+"</br>Média: "+media+"<br>Frequência: "+fre+"%"+"<br>Frequência Mínina: 80%"+resultado;
+                contagem++;     
+            }
+            document.getElementById("final").innerHTML = "<hr>Total Aprovadas: "+ap+ "<br>Total Reprovados: "+re;
+
+        </script>
+    </body>
+</html>
